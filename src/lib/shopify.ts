@@ -6,4 +6,5 @@ export const shopify = shopifyApi({
   scopes: process.env.SHOPIFY_SCOPES!.split(","),
   hostName: process.env.SHOPIFY_APP_URL!.replace(/^https?:\/\//, ""),
   apiVersion: ApiVersion.April24,
+  isEmbeddedApp: true, // ✅ verplicht veld
 });
