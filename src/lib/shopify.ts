@@ -7,7 +7,8 @@ export const shopify = shopifyApi({
     .split(",")
     .map((s) => s.trim())
     .filter(Boolean),
+  // hostName = alleen de host (zonder https://)
   hostName: process.env.SHOPIFY_APP_URL!.replace(/^https?:\/\//, ""),
   apiVersion: LATEST_API_VERSION,
-  isEmbeddedApp: true, // 🔥 verplicht voor embedded apps
+  isEmbeddedApp: true, // ← VERPLICHT
 });
